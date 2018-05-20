@@ -102,6 +102,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     user_following.setText(Integer.toString(userModel.getFollowing()));
                     user_public_repos.setText(Integer.toString(userModel.getPublic_repo()));
                     user_public_gists.setText(Integer.toString(userModel.getPublic_gists()));
+                    btn_view_user_repos.setText("View " + userModel.getLogin() + "'s " + "Repos");
                     SharedPrefs.saveSignupCredentials(getApplicationContext(), AppConstants.USER_DETAILS, userModel.getLogin());
                     if (parentLayout != null) {
                         InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
